@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-python-server
+  name: deployment-app-python-server
 spec:
   replicas: 4
   selector:
@@ -13,8 +13,8 @@ spec:
         app: app-python-server
     spec:
       containers:
-      - name: image-python-latest
-        image: python
+      - name: image-python-server
+        image: python:2.7
         imagePullPolicy: IfNotPresent
         resources:
           limits:

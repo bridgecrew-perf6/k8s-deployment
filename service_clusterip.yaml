@@ -5,8 +5,7 @@ metadata:
 spec:
   type: ClusterIP # default type is ClusterIP
   selector:
-    app: python-server
+    app: app-python-server
   ports:
-  - port: 8080
-    protocol: TCP
-    targetPort: 80
+  - port: 80
+    targetPort: 8080
