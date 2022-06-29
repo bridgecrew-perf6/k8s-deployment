@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-python-server
+spec:
+  type: NodePort # default type is ClusterIP
+  selector:
+    app: python-server
+  ports:
+  - protocol: TCP # Default protocol is TCP
+    port: 8080
+    targetPort: 80
